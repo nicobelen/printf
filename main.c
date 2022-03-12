@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	char caracter = 'b';
-	_printf_c(caracter);
+	int n = '4';
+	print_number(n);
 	return (0);
 }

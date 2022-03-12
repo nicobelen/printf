@@ -71,7 +71,7 @@ void print_rev(char *s)
 */
 void print_number(int n)
 {
-	unsigned int a;
+	int a = 1024;
 
 	if (n < 0)
 	{		
@@ -84,11 +84,10 @@ void print_number(int n)
 	}
 	while (n > 0)
 	{
-		n = ((n % 10) + '0');
-		n /= 10;
-		a = n;
-		a = ((n % 10) + '0');
-		a /= 10;
-		_putchar(a);
+		int digit = a % 10;
+		a = a / 10;
+		_putchar(digit);
+		_putchar('\n');
+		break;
 	}
 }
