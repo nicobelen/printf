@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+int _putchar(char c);
 void print_rev(char *s);
 int _printf_s(char *str);
 int _printf_c(char caracter);
