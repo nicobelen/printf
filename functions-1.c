@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
 *_printf_c - funcion que corresponde a printf %c
 *
 *@caracter: caracter a printear perteneciente a la tabla ASCII
 *Return: 1
 */
+
 int _printf_c(char caracter)
 {
         if (caracter >= 32 && caracter <= 126)
@@ -14,12 +16,14 @@ int _printf_c(char caracter)
         }
         return (1);
 }
+
 /**
 *_printf_s - function that prints a string
 *
 *@str: string to print
 *Return: i
 */
+
 int _printf_s(char *str)
 {
         int i = 0;
