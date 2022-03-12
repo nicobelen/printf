@@ -69,25 +69,35 @@ void print_rev(char *s)
 * @n: parameter
 * Return: void
 */
-void print_number(int n)
-{
-	int a = 1024;
+int _printf_d_i(int n)
+{	
+	int i;	
+	unsigned int dc, dig, nat = n;	
+	double f = 1;
 
-	if (n < 0)
-	{		
-		n = -n;
-		_putchar('-');
-	}
-	else if (n == 0)
-	{
+	if (n == 0)
 		_putchar('0');
-	}
-	while (n > 0)
+	else
 	{
-		int digit = a % 10;
-		a = a / 10;
-		_putchar(digit);
-		_putchar('\n');
-		break;
+		if (n < 0)
+			{
+				nat = n * -1;
+				_putchar('-');
+			}
+		while (f <= nat)
+		{
+			f *= 10;
+			dc = f / 10;
+		}
+		while (dc >= 1)
+		{
+			dig = nat / dc;
+			_putchar(dig + '0');
+			nat = (nat - (dc * dig));
+			dc /= 10;
+		}
 	}
+		_putchar('\n');
+	for (i = 0; i < n; i++)
+		return (i);
 }
