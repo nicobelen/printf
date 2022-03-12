@@ -44,7 +44,7 @@ int _printf_s(char *str)
  *_putchar: return
 */
 
-void print_rev(char *s)
+void printf_rev(char *s)
 {
 
 	int lon = 0;
@@ -69,7 +69,7 @@ void print_rev(char *s)
 * @n: parameter
 * Return: void
 */
-void print_number(int n)
+void printf_number(int n)
 {
 	unsigned int a;
 
