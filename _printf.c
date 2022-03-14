@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	va_start (list, format);
 
-	int i, j = 0;
+	int i = 0, j = 0;
 
 	while (format[i] != '\0')
 	{
