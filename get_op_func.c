@@ -10,7 +10,7 @@ int (*get_op_func(const char *format))(va_list)
 {
 	int i = 0;
 
-	op_t ops[] = {
+	op_t op[] = {
 		{"c", op_char},
 		{"s", op_str},
 		{"d", op_d_i},
@@ -19,11 +19,11 @@ int (*get_op_func(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	while (ops[i].op != NULL)
+	while (op[i].ops != NULL)
 	{
-		if (ops[i].op[0] == *format)
+		if (op[i].ops[0] == *format)
 		{
-			return (ops[i].f);
+			return (op[i].f);
 		}
 		i++;
 	}
