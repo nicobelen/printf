@@ -5,19 +5,11 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
-<<<<<<< HEAD
- *struct op - Estruct
- *@ops: format
- *@f: function
- */
-typedef struct op
-=======
-* struct op_var - structure of the list
-* @op: format
-*
+*struct op - Estruct
+*@ops: format
+*@f: function
 */
 typedef struct op_var
->>>>>>> abdd23e30326594ae0657af4636ca29258968af4
 {
 	char *ops;
 	int (*f)(va_list);
