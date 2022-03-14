@@ -7,14 +7,16 @@
 *Return: 1
 */
 
-int _printf_c(char caracter)
+int op_char(va_list c)
 {
-        if (caracter >= 32 && caracter <= 126)
-        {
-                _putchar(caracter);
-                _putchar('\n');
-        }
-        return (1);
+	
+	char character;	
+
+	character = va_arg(c, int);
+
+	_putchar(character);
+	
+	return (1);
 }
 
 /**
@@ -24,12 +26,19 @@ int _printf_c(char caracter)
 *Return: i
 */
 
-int _printf_s(char *str)
+int op_str(va_list s)
 {
         int i = 0;
-        while (*(str + i) != '\0')
+	char *string;
+	
+	string = va_arg(s, char *);
+
+	if (string == NULL)
+		string = "(nil)";
+
+        while (string[i] != '\0')
         {
-                _putchar(*(str + i));
+                _putchar(string[i]);
                 i++;
         }
         _putchar('\n');
@@ -44,9 +53,9 @@ int _printf_s(char *str)
  *_putchar: return
 */
 
-void printf_rev(char *s)
+int op_rev(va_list r)
 {
-
+	char *s;
 	int lon = 0;
 	int j;
 
@@ -70,8 +79,9 @@ void printf_rev(char *s)
 * Return: void
 */
 
-int _printf_d_i(int n)
-{	
+int op_d_i(va_list d)
+{
+	unsigned int n;	
 	int i;	
 	unsigned int dc, dig, nat = n;	
 	double f = 1;
@@ -102,3 +112,5 @@ int _printf_d_i(int n)
 	for (i = 0; i < n; i++)
 		return (i);
 }
+
+
