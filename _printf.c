@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '\0')
 			return (j);
 
-		f = get_op_func(&format[i + 1]);
+		f = get_op_func(format[i + 1]);
 
 		if (f != NULL)
 		{
@@ -67,7 +67,6 @@ int _printf(const char *format, ...)
 		{
 			while (j < 15)
 			{
-				//javi cabeza de rodilla recorre la lista de la estructura
 				if (op[j].func[0] == format[i + 1])
 				{
 					op[j].f(list);

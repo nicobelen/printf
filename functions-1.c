@@ -81,10 +81,13 @@ int op_rev(va_list r)
 
 int op_d_i(va_list d)
 {
+	int strs;
 	unsigned int n;	
 	int i;	
 	unsigned int dc, dig, nat = n;	
 	double f = 1;
+
+	strs = va_arg(d, int);
 
 	if (n == 0)
 		_putchar('0');
