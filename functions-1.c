@@ -28,7 +28,7 @@ int op_str(va_list s)
 	string = va_arg(s, char *);
 
 	if (string == NULL)
-		string = "(nil)";
+		string = ("(null)");
 
 	while (string[i] != '\0')
 	{
