@@ -4,11 +4,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ *struct op - Estruct
+ *@ops: format
+ *@f: function
+ */
 typedef struct op
 {
-  char *op;
-  int (*f)(va_list);
+	char *ops;
+	int (*f)(va_list);
 } op_t;
 
 int _printf(const char *format, ...);
