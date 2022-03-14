@@ -55,21 +55,23 @@ int op_str(va_list s)
 int op_rev(va_list r)
 {
 	char *s;
-	int lon = 0;
+	int i = 0;
 	int j;
+
+	s = va_arg(r, char *);
 
 	while (*s != '\0')
 	{
-		lon++;
+		i++;
 		++s;
 	}
 	s--;
-	for (j = lon; j > 0; j--)
+	for (j = i; j > 0; j--)
 	{
 		_putchar(*s);
 		s--;
 	}
-
+	return (i);
 }
 /**
 * print_number - function that prints an int
