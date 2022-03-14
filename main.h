@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
-*struct op - Estruct
+*struct op_var - Estruct
 *@ops: format
 *@f: function
 */
