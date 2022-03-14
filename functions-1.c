@@ -7,7 +7,7 @@
 *Return: 1
 */
 
-int _printf_c(char caracter)
+int op__printf_c(char caracter)
 {
         if (caracter >= 32 && caracter <= 126)
         {
@@ -24,7 +24,7 @@ int _printf_c(char caracter)
 *Return: i
 */
 
-int _printf_s(char *str)
+int op__printf_s(char *str)
 {
         int i = 0;
         while (*(str + i) != '\0')
@@ -44,7 +44,7 @@ int _printf_s(char *str)
  *_putchar: return
 */
 
-void printf_rev(char *s)
+void op_printf_rev(char *s)
 {
 
 	int lon = 0;
@@ -70,7 +70,7 @@ void printf_rev(char *s)
 * Return: void
 */
 
-int _printf_d_i(int n)
+int op__printf_d_i(int n)
 {	
 	int i;	
 	unsigned int dc, dig, nat = n;	

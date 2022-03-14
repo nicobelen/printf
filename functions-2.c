@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  *
@@ -6,7 +6,7 @@
  *
  */
 
-void printf_number(int n)
+void op_printf_number(int n)
 {
         unsigned int a;
 

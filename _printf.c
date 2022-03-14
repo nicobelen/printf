@@ -9,6 +9,7 @@
 
 int _printf(const char *format, ...)
 {
+	get_op_func(va_list);
 	//Si escribieron algo dentro de format
 	if (format == NULL)
 		return (-1);
