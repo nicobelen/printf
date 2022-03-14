@@ -6,18 +6,32 @@
 *
 *
 */
-int (*get_op_func(char *s))(va_list)
+int (*get_op_func(const char *format))(va_list)
 {
+	int i;
+	char *s;
+
 	op_t ops[] = {
-		{"c", _printf_c},
-		{"s", _printf_s},
-		{"d", _printf_d_i},
-		{"i", _printf_d_i},
-		{"r", print_rev},
+		{"c", op_char},
+		{"s", op_str},
+		{"d", op_d_i},
+		//{"i", op_f},
+		{"r", op_rev},
 		{NULL, NULL}
 	};
+/**
+	
+	while (ops[i].op != NULL)
+	{
+		if (*(ops[i].op) == *s)
+		{
+			break;
+		}	
+		i++;
+	}
+	return (ops[i].f);
+*/
 
-	int i;
 
 	i = 0;
 
