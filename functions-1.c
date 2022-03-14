@@ -41,7 +41,6 @@ int op_str(va_list s)
                 _putchar(string[i]);
                 i++;
         }
-        _putchar('\n');
         return (i);
 }
 
@@ -71,7 +70,6 @@ int op_rev(va_list r)
 		s--;
 	}
 
-	_putchar('\n');
 }
 /**
 * print_number - function that prints an int
@@ -111,7 +109,6 @@ int op_d_i(va_list d)
 			dc /= 10;
 		}
 	}
-		_putchar('\n');
 	for (i = 0; i < n; i++)
 		return (i);
 }

@@ -8,7 +8,7 @@
 */
 int (*get_op_func(const char format))(va_list)
 {
-	int i;
+	int i = 0;
 
 	op_t ops[] = {
 		{"c", op_char},
@@ -23,11 +23,11 @@ int (*get_op_func(const char format))(va_list)
 	{
 		if (ops[i].op[0] == format)
 		{
-			break;
+			return (ops[i].f);
 		}	
 		i++;
 	}
-	return (ops[i].f);
+	return (NULL);
 
 /**
 	i = 0;
