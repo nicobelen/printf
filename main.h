@@ -17,6 +17,6 @@ int op_rev(va_list r);
 int op_str(va_list s);
 int op_char(va_list c);
 int op_d_i(va_list d);
-int (*get_op_func(const char s))(va_list);
+int (*get_op_func(const char *format))(va_list);
 
 #endif

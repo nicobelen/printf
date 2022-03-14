@@ -6,7 +6,7 @@
 *
 *
 */
-int (*get_op_func(const char format))(va_list)
+int (*get_op_func(const char *format))(va_list)
 {
 	int i = 0;
 
@@ -21,7 +21,7 @@ int (*get_op_func(const char format))(va_list)
 	
 	while (ops[i].op != NULL)
 	{
-		if (ops[i].op[0] == format)
+		if (ops[i].op[0] == *format)
 		{
 			return (ops[i].f);
 		}	

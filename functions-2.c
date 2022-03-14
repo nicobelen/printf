@@ -5,7 +5,7 @@
  *
  *
  */
-
+/**
 void op_printf_number(int n)
 {
         unsigned int a;
@@ -29,3 +29,4 @@ void op_printf_number(int n)
                 _putchar(a);
         }
 }
+*/

@@ -32,31 +32,28 @@ int _printf(const char *format, ...)
 		if (format[i] == '\0')
 			return (j);
 
-		f = get_op_func(format[i + 1]);
+		f = get_op_func(&format[i + 1]);
 
 		if (f != NULL)
 		{
-			j += f(list);
+			j += f(list	);
 			i += 2;
 			continue;
 		}
 
-	        if (format[i + 1] == '\0')
-		return (-1);
+	    if (format[i + 1] == '\0')
+			return (-1);
 
-	        _putchar(format[i]);
-
-        	j++;
-
+		_putchar(format[i]);
+        
+		j++;
 		if (format[i + 1] == '%')
 		{
 			i += 2;
-			printf("hola");
 		}
 		else
 			i++;
 	}
-
 	va_end(list);
 
 	return (j);
