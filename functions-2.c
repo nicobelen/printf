@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *op_printf_number - Prints numbers
- *
- *@n: Number
- */
-/**
+*op_printf_number - Prints numbers
+*
+*@n: Number
+*/
+
 void op_printf_number(int n)
 {
 	unsigned int a;
@@ -29,4 +29,3 @@ void op_printf_number(int n)
 		_putchar(a);
 	}
 }
-*/
