@@ -115,5 +115,3 @@ int op_d_i(va_list d)
 	for (i = 0; i < n; i++)
 		return (i);
 }
-
-

@@ -14,7 +14,7 @@ int (*get_op_func(const char format))(va_list)
 		{"c", op_char},
 		{"s", op_str},
 		{"d", op_d_i},
-		//{"i", op_f},
+		{"i", op_d_i},
 		{"r", op_rev},
 		{NULL, NULL}
 	};
