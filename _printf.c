@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		if (f != NULL)
 		{
 			j += f(list);
-				i += 2;
+			i += 2;
 			continue;
 		}
 
@@ -49,7 +49,10 @@ int _printf(const char *format, ...)
         	j++;
 
 		if (format[i + 1] == '%')
+		{
 			i += 2;
+			printf("hola");
+		}
 		else
 			i++;
 	}

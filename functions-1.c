@@ -79,30 +79,29 @@ int op_rev(va_list r)
 
 int op_d_i(va_list d)
 {
-	unsigned int n = va_arg(d, unsigned int);	
-	unsigned int dc, dig, nat = n;	
-	double f = 1;
+	int n;	
+	int dc = 1, dig = 0;
+	unsigned int nat;	
 
-	if (n == 0)
-		_putchar('0');
-	else
+	n = va_arg(d, int);
+
+	if (n < 0)
 	{
-		if (n < 0)
-			{
-				nat = n * -1;
-				_putchar('-');
-			}
-		while (f <= nat)
-		{
-			f *= 10;
-			dc = f / 10;
-		}
-		while (dc >= 1)
-		{
-			dig = nat / dc;
-			_putchar(dig + '0');
-			nat = (nat - (dc * dig));
-			dc /= 10;
-		}
+		dig += _putchar('-');
+		nat = n * -1;
 	}
+	else
+		nat = n;
+
+	while (nat / dc > 9)
+	{
+		dc = dc * 10;
+	}
+	while (dc >= 1)
+	{
+		dig += _putchar((nat / dc) + '0');
+		nat = nat % dc;
+		dc /= 10;
+	}
+	return (dig);
 }
