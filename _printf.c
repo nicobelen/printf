@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		if (f != NULL)
 		{
 			j += f(list);
-			i += 2;
+				i += 2;
 			continue;
 		}
 
