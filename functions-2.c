@@ -29,3 +29,37 @@ void op_printf_number(int n)
 		_putchar(a);
 	}
 }
+
+/**
+* rot13 - Compare a string with evry latter of abc 
+* @R: The va_list
+* Return: Length
+*/
+
+int _print_R(va_list R)
+{
+	char *strings;
+	char l[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i;
+	int j;
+
+	strings = va_arg(R, char *);
+
+	if(!strings)
+		return (-1);
+
+	for (i = 0; strings[i]; i++)
+	{
+		for (j = 0; j < 53; j++)
+		{
+			if (strings[i] == l[j])
+			{
+				_putchar(rot13[j]);
+			}
+			else
+				_putchar(l[i]);
+		}
+	}
+	return (i);
+}

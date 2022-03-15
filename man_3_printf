@@ -1,1 +1,64 @@
-1234
+NAME
+	_printf
+
+SYNOPSIS
+	
+	#include "main.h"
+
+	int _printf(char *format, ...)
+
+DESCRIPTION
+
+	The function "_printf" is a variadic function that produces output according to a format. This function writes the output to s
+	dout (standard output).
+
+	The format string controls the output given, it specifies how subsequent
+	arguments are converted for stdout.
+
+Format of the format string
+
+	This format string is a character string. It is composed of zero or various 
+	directives, these are: normal characters excluding "%" which are copied exact 
+	the same to the output; and the conversion specifications result adding zero
+	or more arguments.
+
+Conversion specification (%)
+
+	Each conversion specification is added using the character % and ends with a 
+	conversion specifier.
+
+The overall syntax of a conversion specification is:
+
+	_printf("Hola Mundo!");
+
+	The arguments must correspond with the conversion specifier order. The arguments
+	are used int the order given.
+
+Conversion specifiers
+
+	Is a character followed after the % character that specifies the type of 
+	conversion to be applied. The conversion specifiers to _printf are:
+
+	d, i	The int argument is converted to signed decimal notation.
+            The precision, if any, gives the minimum number of digits
+            that must appear.
+
+	s	 The const char * argument is expected to be a pointer to
+ 		 an array of character type (pointer to a string).  Characters
+             from the array are written up to (but not including) a 
+             terminating null byte ('\0').
+
+	c
+		The char argument is expected to be the character to be printed.
+
+ 	r	The char * is expected to be a pointer to a string. The characters
+		from the array are printed in reverse excluding the null byte ('\0').
+
+	R (ROT-13)
+		The char * is expected to be a pointer to a string. Characters are
+		printed using ROT 13 encryption.
+
+RETURN VALUE
+
+	On successful return, the _printf function returns the number of characters
+	printed, excluding the null byte ('\0') used to print strings.
