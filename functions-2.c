@@ -31,7 +31,7 @@ void op_printf_number(int n)
 }
 
 /**
-* rot13 - Compare a string with evry latter of abc 
+* _print_R - Compare a string with evry latter of abc
 * @R: The va_list
 * Return: Length
 */
@@ -46,7 +46,7 @@ int _print_R(va_list R)
 
 	strings = va_arg(R, char *);
 
-	if(!strings)
+	if (!strings)
 		return (-1);
 
 	for (i = 0; strings[i]; i++)
