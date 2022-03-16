@@ -70,8 +70,13 @@ int op_rev(va_list r)
 * @x: recieved number
 * Return: void
 */
-void rec(int x)
+int rec(int x)
 {
+	if (x == 0)
+	{
+		_putchar(0);
+		return (1);
+	}
 	if (x < 0)
 	{
 		_putchar('-');
@@ -80,6 +85,7 @@ void rec(int x)
 	if ((x / 10) > 0)
 		rec(x / 10);
 	_putchar(x % 10 + 48);
+	return (x);
 }
 /**
 * op_d_i - function that prints an int
