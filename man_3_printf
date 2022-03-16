@@ -9,8 +9,8 @@ SYNOPSIS
 
 DESCRIPTION
 
-	The function "_printf" is a variadic function that produces output according to a format. This function writes the output to s
-	dout (standard output).
+	The function "_printf" is a variadic function that produces output according to a format. This function writes the output to 
+  stdout (standard output).
 
 	The format string controls the output given, it specifies how subsequent
 	arguments are converted for stdout.

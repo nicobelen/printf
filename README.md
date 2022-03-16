@@ -1,29 +1,24 @@
-#ifndef MAIN_H
+# _printf's README.md!
 
-If MAIN_H
-#define MAIN_H
-#define BUFFER_SIZE 1024
+Our "_printf" function it's capable of act like some of the original "printf" functions. You can print one character, a string, an integer, even a reverse string just by calling to our function in your project and using the different flag characters.
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdarg.h>
-/**
-*struct op_var - Estruct
-*@ops: format
-*@f: function
-*/
-typedef struct op_var
-{
-	char *ops;
-	int (*f)(va_list);
-} op_t;
+# Files included
 
-int (*get_op_func(const char *format))(va_list);
-int _printf(const char *format, ...);
-int _putchar(char c);
-int op_rev(va_list r);
-int op_str(va_list s);
-int op_char(va_list c);
-int op_d_i(va_list d);
+main.h - main.c - _printf.c - functions-1.c - functions-2.c - get_op_functions.c - _putchar.c - man_3_printf - README.md
 
-#endif
+## Usage
+
+Add/link _printf to the main.h file of your project.
+![](https://raw.githubusercontent.com/nicobelen/_printf-images/main/image_2022-03-15_180406.png)
+
+## Supported format specifiers
+|type|          Output           |
+|----|---------------------------|
+| %c | Prints a character        |
+| %s | Prints a string           |
+| %d | Prints an integer         |
+| %i | Prints a positive integer |
+| %r | Prints a string in reverse|
+| %b | Converts integer to binary|
+| %R | Converts a string to ROT13|
+![](https://raw.githubusercontent.com/nicobelen/_printf-images/main/Untitled%20Diagram.drawio.png)
