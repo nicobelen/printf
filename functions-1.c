@@ -100,5 +100,5 @@ int op_d_i(va_list d)
 		n /= 10;
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
