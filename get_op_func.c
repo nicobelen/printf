@@ -16,7 +16,6 @@ int (*get_op_func(const char *format))(va_list)
 		{"d", op_d_i},
 		{"i", op_d_i},
 		{"r", op_rev},
-		{"b", op_bin},
 		{NULL, NULL}
 	};
 

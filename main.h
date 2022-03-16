@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-#define BUFFER_SIZE 1024
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -23,6 +22,5 @@ int op_rev(va_list r);
 int op_str(va_list s);
 int op_char(va_list c);
 int op_d_i(va_list d);
-int op_bin(va_list b);
 
 #endif
