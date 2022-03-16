@@ -70,7 +70,7 @@ int op_rev(va_list r)
 * @x: recieved number
 * Return: void
 */
-void rec(unsigned int x)
+void rec(int x)
 {
 	if (x < 0)
 	{
@@ -88,7 +88,7 @@ void rec(unsigned int x)
 */
 int op_d_i(va_list d)
 {
-	unsigned int n;
+	int n;
 	int i = 0;
 
 	n = va_arg(d, int);
