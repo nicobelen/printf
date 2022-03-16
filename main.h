@@ -22,6 +22,5 @@ int op_rev(va_list r);
 int op_str(va_list s);
 int op_char(va_list c);
 int op_d_i(va_list d);
-void rec(int x):
 
 #endif
