@@ -20,12 +20,11 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] != '\0' && format[i] != '%')
+		while (format[i] != '\0' && format[i] != '%')
 		{
 			_putchar(format[i]);
 			j++;
-			i++;
-			continue; }
+			i++;	}
 		if (format[i] == '\0')
 			return (j);
 		f = get_op_func(&format[i + 1]);

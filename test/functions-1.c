@@ -50,8 +50,6 @@ int op_rev(va_list r)
 
 	s = va_arg(r, char *);
 
-	printf("entre a la funcion");
-
 	while (*s != '\0')
 	{
 		i++;
@@ -66,39 +64,35 @@ int op_rev(va_list r)
 	return (i);
 	}
 /**
-* rec - recursion of / 10
-* @x: recieved number
-* Return: void
-*/
-void rec(int x)
-{
-	if (x < 0)
-	{
-		_putchar('-');
-		x *= -1;
-	}
-	if (x / 10)
-		rec(x / 10);
-	_putchar(x % 10 + 48);
-}
-/**
 * op_d_i - function that prints an int
 * @d: parameter
 * Return: void
 */
 int op_d_i(va_list d)
 {
-	unsigned int n;
-	int i = 0;
+	int n;
+	int dc = 1, dig = 0;
+	unsigned int nat;
 
 	n = va_arg(d, int);
 
-	rec(n);
-
-	while (n / 10)
+	if (n < 0)
 	{
-		n /= 10;
-		i++;
+		dig += _putchar('-');
+		nat = n * -1;
 	}
-	return (i);
+	else
+		nat = n;
+
+	while (nat / dc > 9)
+	{
+		dc = dc * 10;
+	}
+	while (dc >= 1)
+	{
+		dig += _putchar((nat / dc) + '0');
+		nat = nat % dc;
+		dc /= 10;
+	}
+	return (dig);
 }

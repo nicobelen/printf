@@ -41,6 +41,7 @@ int op_bin(va_list b)
 
 	n = va_arg(b, int);
 
+	n = malloc(sizeof(int) + 1);
 
 	while (n != 0)
 	{
