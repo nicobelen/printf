@@ -70,20 +70,24 @@ int op_rev(va_list r)
 * @x: recieved number
 * Return: void
 */
-void rec(int x)
+int rec(int n)
 {
-	if (x == 0)
-	{
-		_putchar(0);
-	}
-	if (x < 0)
+	int l = 0;
+	unsigned int aux = 0;
+	
+	if (n < 0)
 	{
 		_putchar('-');
-		x *= -1;
+		aux = -n;
+		l++;
 	}
-	if ((x / 10) > 0)
-		rec(x / 10);
-	_putchar(x % 10 + 48);
+	else
+		aux = n;
+	if (n / 10)
+		l += rec(aux / 10);
+	_putchar((aux % 10) + 48);
+	l++;
+	return (l);
 }
 /**
 * op_d_i - function that prints an int
@@ -92,17 +96,9 @@ void rec(int x)
 */
 int op_d_i(va_list d)
 {
-	int n;
-	int i = 0;
-
-	n = va_arg(d, int);
-
-	rec(n);
-
-	while (n / 10)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i + 1);
+	int i;
+	
+	i = va_arg(d, int);
+	
+	return (rec(i));
 }
