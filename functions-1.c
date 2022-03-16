@@ -70,7 +70,7 @@ int op_rev(va_list r)
 * @x: recieved number
 * Return: void
 */
-void rec(int x)
+void rec(unsigned int x)
 {
 	if (x < 0)
 	{
