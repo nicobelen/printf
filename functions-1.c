@@ -77,7 +77,7 @@ void rec(int x)
 		_putchar('-');
 		x *= -1;
 	}
-	if (x / 10)
+	if ((x / 10) > 0)
 		rec(x / 10);
 	_putchar(x % 10 + 48);
 }
