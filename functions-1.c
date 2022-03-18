@@ -50,8 +50,6 @@ int op_rev(va_list r)
 
 	s = va_arg(r, char *);
 
-	printf("entre a la funcion");
-
 	while (*s != '\0')
 	{
 		i++;
@@ -67,14 +65,14 @@ int op_rev(va_list r)
 	}
 /**
 * rec - recursion of / 10
-* @x: recieved number
+* @n: recieved number
 * Return: void
 */
 int rec(int n)
 {
 	int l = 0;
 	unsigned int aux = 0;
-	
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -84,7 +82,7 @@ int rec(int n)
 	else
 		aux = n;
 	if (n / 10)
-		l += rec(aux / 10);
+		l += rec(aux / 10); /**l = l + rec(aux / 10)*/
 	_putchar((aux % 10) + 48);
 	l++;
 	return (l);
@@ -97,8 +95,8 @@ int rec(int n)
 int op_d_i(va_list d)
 {
 	int i;
-	
+
 	i = va_arg(d, int);
-	
+
 	return (rec(i));
 }

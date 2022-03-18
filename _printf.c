@@ -18,29 +18,30 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
-	while (format[i] != '\0')
+	while (format[i] != '\0') /**Mientras format sea distinto de null entra*/
 	{
 		if (format[i] != '\0' && format[i] != '%')
+			/**si se cumplen ambas condiciones*/
 		{
-			_putchar(format[i]);
+			_putchar(format[i]); /**Imprime posicion de format*/
 			j++;
 			i++;
 			continue; }
-		if (format[i] == '\0')
+		if (format[i] == '\0') /**Si no hay nada en format, imprime contador vacio*/
 			return (j);
 		f = get_op_func(&format[i + 1]);
+		/**Cuando es % llama a la funcion correspondiente*/
 		if (f != NULL)
-		{
+		{	/**Si contiene una funcion, ejecuta y avanza 2 posiciones*/
 			j += f(list);
 			i += 2;
 			continue;	}
-		if (format[i + 1] == '\0')
+		if (format[i + 1] == '\0') /**Si no existe funcion, retorna -1*/
 			return (-1);
-		_putchar(format[i]);
+		_putchar(format[i]); /**Imprime el caracter*/
 		j++;
 
-		if (format[i + 1] == '%')
+		if (format[i + 1] == '%') /**Si el siguiente caracter es % lo ignora*/
 		{
 			i += 2;	}
 		else
